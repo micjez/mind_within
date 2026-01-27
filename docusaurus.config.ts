@@ -15,7 +15,7 @@ const config: Config = {
   },
 
   // Set the production url of your site here
-  url: 'https://your-docusaurus-site.example.com',
+  url: 'https://mind-within.pages.dev',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
@@ -79,14 +79,7 @@ const config: Config = {
           position: 'left',
           target: '_self',
           className: 'navbar__link--no-external-icon',
-        },
-        {
-          to: '/atom.xml',
-          label: 'Atom',
-          position: 'right',
-          className: 'navbar__icon-link navbar__icon-link--rss',
-          'aria-label': 'RSS feed',
-        },
+        }
       ],
     },
     footer: {
