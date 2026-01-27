@@ -79,14 +79,7 @@ const config: Config = {
           position: 'left',
           target: '_self',
           className: 'navbar__link--no-external-icon',
-        },
-        {
-          to: '/atom.xml',
-          label: 'Atom',
-          position: 'right',
-          className: 'navbar__icon-link navbar__icon-link--rss',
-          'aria-label': 'RSS feed',
-        },
+        }
       ],
     },
     footer: {
