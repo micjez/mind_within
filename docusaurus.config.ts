@@ -25,7 +25,7 @@ const config: Config = {
   //organizationName: 'swiadomosc', // Usually your GitHub org/user name.
   //projectName: 'landscape', // Usually your repo name.
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
 
   // Even if you don't use internationalization, you can use this field to set
@@ -47,6 +47,7 @@ const config: Config = {
           feedOptions: {
             type: ['rss', 'atom'],
             xslt: true,
+            copyright: `Copyright © ${new Date().getFullYear()} Mind Within`,
           },
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
@@ -79,6 +80,20 @@ const config: Config = {
           position: 'left',
           target: '_self',
           className: 'navbar__link--no-external-icon',
+        },
+        {
+          href: 'pathname:///rss.xml',
+          label: 'RSS',
+          position: 'right',
+          target: '_self',
+          className: 'navbar__icon-link navbar__icon-link--rss',
+        },
+        {
+          href: 'pathname:///atom.xml',
+          label: 'Atom',
+          position: 'right',
+          target: '_self',
+          className: 'navbar__icon-link navbar__icon-link--atom',
         }
       ],
     },

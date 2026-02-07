@@ -219,6 +219,11 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="1.5"/><path d="M7 7c1.5-1.5 8-1.5 9.5 0s1.5 8 0 9.5-8 1.5-9.5 0-1.5-8 0-9.5z"/><path d="M7 17c-1.5-1.5-1.5-8 0-9.5s8-1.5 9.5 0 1.5 8 0 9.5-8 1.5-9.5 0z"/></svg>');
 }
 
+.navbar__icon-link--rss svg,
+.navbar__icon-link--atom svg {
+  display: none !important;
+}
+
 .navbar__link {
   font-weight: 500;
   font-size: 0.9375rem;
@@ -450,4 +455,98 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 1rem;
   line-height: 1.6;
   margin: 0;
+}
+
+/* Photo gallery styles */
+.photo-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.photo-gallery a {
+  display: block;
+  text-decoration: none;
+  border-radius: var(--rounded-lg);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.photo-gallery a:hover {
+  transform: translateY(-2px);
+}
+
+.photo-gallery img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  display: block;
+}
+
+/* Responsive photo gallery */
+@media (max-width: 768px) {
+  .photo-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .photo-gallery {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Comparison gallery styles */
+.comparison-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.comparison-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.comparison-item a {
+  display: block;
+  text-decoration: none;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  width: 100%;
+}
+
+.comparison-item a:hover {
+  transform: translateY(-2px);
+}
+
+.comparison-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  display: block;
+}
+
+.comparison-caption {
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  font-family: var(--ifm-font-family-monospace);
+}
+
+/* Responsive comparison gallery */
+@media (max-width: 768px) {
+  .comparison-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .comparison-gallery {
+    grid-template-columns: 1fr;
+  }
 }
